@@ -1,10 +1,12 @@
 CFLAGS		?= -O2 -pipe -g3
 CXXFLAGS	?= $(CFLAGS)
-WARN_FLAGS	 = -Wall -Wextra -Werror -Wcast-align -Wno-unused-parameter \
-		   -Wno-missing-field-initializers -Wstrict-prototypes \
-		   -Werror-implicit-function-declaration -Wundef
-CFLAGS		+= -fPIC $(WARN_FLAGS)
-CXXFLAGS	+= -fPIC $(WARN_FLAGS)
+#WARN_FLAGS	 = -Wall -Wextra -Werror -Wcast-align -Wno-unused-parameter \
+#		   -Wno-missing-field-initializers -Wstrict-prototypes \
+#		   -Werror-implicit-function-declaration -Wundef
+#CFLAGS		+= -fPIC $(WARN_FLAGS)
+#CXXFLAGS	+= -fPIC $(WARN_FLAGS)
+CFLAGS		+= -fPIC
+CXXFLAGS	+= -fPIC
 CPPFLAGS	+= -I.. -D__USER__ -include out-of-tree-autoconf.h
 CC		 = $(CROSS_COMPILE)gcc
 CXX		 = $(CROSS_COMPILE)g++
